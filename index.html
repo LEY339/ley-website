@@ -3,101 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LEY — Legal Education for Youth</title>
+  <title>Legal Education for Youth (LEY)</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #00274d;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    nav {
-      text-align: center;
-      background: #011f3f;
-      padding: 0.5rem;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .cta {
-      background: #e6f2ff;
-      border-left: 5px solid #005bb5;
-      padding: 1rem;
-      margin: 2rem 0;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #00274d;
-      color: white;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header, footer { background-color: #003366; color: white; padding: 1em 2em; text-align: center; }
+    main { padding: 2em; max-width: 800px; margin: auto; background: white; }
+    section { margin-bottom: 2em; }
+    form input, form textarea, form button { display: block; width: 100%; margin-top: 0.5em; padding: 0.5em; }
+    form button { background-color: #003366; color: white; border: none; cursor: pointer; }
+    form button:hover { background-color: #0055a5; }
+    .donation-options button { margin-top: 1em; width: auto; }
+    .subscription { margin-top: 1em; }
   </style>
 </head>
 <body>
   <header>
-    <h1>LEY</h1>
-    <p><strong>Legal Education for Youth</strong></p>
-    <p>Know the law. Own your power.</p>
+    <h1>Legal Education for Youth (LEY)</h1>
   </header>
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        Legal Education for Youth was founded to ensure that teens everywhere could be educated on their rights and understanding legal education further. It was built for youth that are interested in pursuing a career in law, people who want to understand why and how their society was built and functions, and teens that want to be able to confidently know their rights during pressing matters.
+      </p>
+    </section>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#programs">Programs</a>
-    <a href="#get-involved">Get Involved</a>
-    <a href="#donate">Donate</a>
-  </nav>
+    <section id="donate">
+      <h2>Donate to LEY</h2>
+      <p>Your contribution helps us expand access to legal education for youth across the country.</p>
+      <div class="donation-options">
+        <button onclick="window.location.href='https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID'">Donate with PayPal</button>
+        <p><strong>Zelle:</strong> Send to <a href="mailto:leyproject7@gmail.com">leyproject7@gmail.com</a></p>
+        <p><strong>Apple Pay:</strong> Please email us to request an Apple Pay invoice.</p>
+      </div>
+    </section>
 
-  <section id="about">
-    <h2>About LEY</h2>
-    <p>LEY (Legal Education for Youth) empowers high school students—especially those in underserved communities—with practical legal knowledge. We believe every young person deserves to understand their rights and the laws that affect their everyday lives.</p>
-    <p>We provide in-school workshops, peer-led legal education, and viral digital content to make law accessible, engaging, and empowering for youth.</p>
-  </section>
+    <section id="subscribe">
+      <h2>Monthly Support</h2>
+      <p>Want to support us regularly? Choose your own amount and subscribe monthly.</p>
+      <div class="subscription">
+        <button onclick="window.location.href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YOUR_SUBSCRIPTION_ID'">
+          Subscribe Monthly with PayPal
+        </button>
+      </div>
+    </section>
 
-  <section id="programs">
-    <h2>Programs</h2>
-    <ul>
-      <li><strong>Know Your Rights Workshops:</strong> Interactive lessons delivered in high schools and community centers, covering essential legal topics like police encounters, tenant rights, and youth employment laws.</li>
-      <li><strong>Social Media Legal Series:</strong> Short videos and explainers that teach legal concepts through TikTok and Instagram in a relatable way.</li>
-      <li><strong>Youth Legal Ambassadors:</strong> A leadership program training high school students to educate their peers on rights and justice issues.</li>
-    </ul>
-  </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
 
-  <section id="get-involved">
-    <h2>Get Involved</h2>
-    <p>We’re building a movement — and we need passionate students, educators, attorneys, and sponsors to join us.</p>
-    <ul>
-      <li>Invite us to your school</li>
-      <li>Apply to be a Youth Legal Ambassador</li>
-      <li>Partner with us as a law firm, university, or nonprofit</li>
-    </ul>
-  </section>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
 
-  <section id="donate">
-    <h2>Donate</h2>
-    <div class="cta">
-      <p>Your donation helps us expand access to legal education for thousands of students. Fund workshops, curriculum, outreach, and training for youth leaders. Together, we can raise a generation that knows its rights — and knows how to use them.</p>
-      <p><strong>[DONATE BUTTON COMING SOON]</strong></p>
-    </div>
-  </section>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
   <footer>
-    <p>&copy; 2025 LEY — Legal Education for Youth</p>
+    <p>&copy; 2025 Legal Education for Youth (LEY). All rights reserved.</p>
   </footer>
 </body>
 </html>
