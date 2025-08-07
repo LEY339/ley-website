@@ -2,70 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Legal Education for Youth (LEY)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header, footer { background-color: #003366; color: white; padding: 1em 2em; text-align: center; }
-    main { padding: 2em; max-width: 800px; margin: auto; background: white; }
-    section { margin-bottom: 2em; }
-    form input, form textarea, form button { display: block; width: 100%; margin-top: 0.5em; padding: 0.5em; }
-    form button { background-color: #003366; color: white; border: none; cursor: pointer; }
-    form button:hover { background-color: #0055a5; }
-    .donation-options button { margin-top: 1em; width: auto; }
-    .subscription { margin-top: 1em; }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      margin-top: 0;
+    }
+
+    .button {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    form button {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .donation-icons img {
+      width: 80px;
+      margin-right: 1rem;
+    }
+
+    footer {
+      background-color: #e5e7eb;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .hero {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Legal Education for Youth (LEY)</h1>
+    <p>Empowering teens through legal education.</p>
   </header>
-  <main>
-    <section id="about">
-      <h2>About Us</h2>
-      <p>
-        Legal Education for Youth was founded to ensure that teens everywhere could be educated on their rights and understanding legal education further. It was built for youth that are interested in pursuing a career in law, people who want to understand why and how their society was built and functions, and teens that want to be able to confidently know their rights during pressing matters.
-      </p>
-    </section>
 
-    <section id="donate">
-      <h2>Donate to LEY</h2>
-      <p>Your contribution helps us expand access to legal education for youth across the country.</p>
-      <div class="donation-options">
-        <button onclick="window.location.href='https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID'">Donate with PayPal</button>
-        <p><strong>Zelle:</strong> Send to <a href="mailto:leyproject7@gmail.com">leyproject7@gmail.com</a></p>
-        <p><strong>Apple Pay:</strong> Please email us to request an Apple Pay invoice.</p>
-      </div>
-    </section>
+  <img src="https://images.unsplash.com/photo-1603984176813-15eea4fd6f9d" alt="Legal Education" class="hero"/>
 
-    <section id="subscribe">
-      <h2>Monthly Support</h2>
-      <p>Want to support us regularly? Choose your own amount and subscribe monthly.</p>
-      <div class="subscription">
-        <button onclick="window.location.href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YOUR_SUBSCRIPTION_ID'">
-          Subscribe Monthly with PayPal
-        </button>
-      </div>
-    </section>
+  <section class="card">
+    <h2>About Us</h2>
+    <p>Legal Education for Youth was founded to ensure that teens everywhere could be educated on their rights and understanding legal education further. It was built for youth that are interested in pursuing a career in law, people who want to understand why and how their society was built and functions, and teens that want to be able to confidently know their rights during pressing matters.</p>
+  </section>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
+  <section class="card">
+    <h2>Donate</h2>
+    <p>Support our mission. Every contribution helps spread legal education to more youth across the nation.</p>
+    <div class="donation-icons">
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal"></a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Zelle_logo.svg" alt="Zelle"></a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Pay"></a>
+    </div>
+    <p><strong>Zelle:</strong> leyproject7@gmail.com</p>
+  </section>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
+  <section class="card">
+    <h2>Subscribe Monthly</h2>
+    <p>Want to make a lasting impact? Subscribe and support LEY monthly.</p>
+    <a class="button" href="#">Subscribe with PayPal</a>
+  </section>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+  <section class="card">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required />
 
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="message">Message</label>
+      <textarea name="message" id="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Business email: <a href="mailto:leyproject7@gmail.com">leyproject7@gmail.com</a></p>
+  </section>
+
+  <section class="card">
+    <h2>Thank You</h2>
+    <p>Thank you for making a difference in the lives of children everywhere.</p>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Legal Education for Youth (LEY). All rights reserved.</p>
+    &copy; 2025 Legal Education for Youth (LEY) — All rights reserved.
   </footer>
 </body>
 </html>
